@@ -1,0 +1,32 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_QR_TITLE}</h1>
+<p>{L_QR_EXPLAIN}</p>
+
+
+<form id="acp_qr" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{L_QR_CONFIG}</legend>
+		<dl>
+			<dt><label id="qr_status" for="qr_status">{L_QR_STATUS}{L_COLON}</label></dt>
+			<dd><input type="radio" class="radio" name="qr_status" value="1" <!-- IF QR_STATUS -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp; 
+				<input type="radio" class="radio" name="qr_status" value="0" <!-- IF not QR_STATUS -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+		</dl>
+		<dl>
+			<dt><label id="qr_type" for="qr_type">{L_QR_TYPE}{L_COLON}</label><br /><span>{L_QR_TYPE_EXPLAIN}</span></dt>
+			<dd><input type="radio" class="radio" name="qr_type" value="1" <!-- IF QR_TYPE -->checked="checked"<!-- ENDIF -->/> {L_TOPIC} &nbsp; 
+				<input type="radio" class="radio" name="qr_type" value="0" <!-- IF not QR_TYPE -->checked="checked"<!-- ENDIF --> /> {L_POST}</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,10 @@
+services:
+    ather.qr.listener:
+        class: ather\qr\event\listener
+        arguments:
+            - @controller.helper
+            - @template
+            - @config
+            - %core.php_ext%
+        tags:
+            - { name: event.listener }

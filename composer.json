@@ -1,0 +1,29 @@
+{
+    "name": "ather/qr",
+    "type": "phpbb-extension",
+    "description": "Display QR Code on viewtopic",
+    "homepage": "http://ather.xyz",
+    "version": "1.0.0",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Ather",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "extra": {
+        "display-name": "QR Code",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
+        },
+		"version-check": {
+			"host": "acme.foobar.com",
+			"directory": "/version",
+			"filename": "foobar.json"
+		}
+        
+    }
+}
